@@ -1,0 +1,72 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral do body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;  /* A cor de fundo será substituída pela imagem */
+    background-image: url('dale.png'); /* Caminho da imagem */
+    background-size: cover;  /* A imagem vai cobrir toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    background-attachment: fixed;  /* A imagem de fundo fica fixa ao rolar */
+    margin: 0;
+    color: white; /* Texto padrão branco */
+}
+
+/* Estilo do container */
+.container {
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: white; /* Cor do texto do título */
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white; /* Cor do texto do botão */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo do botão "Não ver" */
+#nao-ver {
+    position: absolute;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Efeito de movimento do botão "Não ver" */
+@keyframes moveButton {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(300px, 300px);
+    }
+}
+
+/* Adicionando animação ao botão "Não ver" */
+#nao-ver:hover {
+    animation: moveButton 1s infinite alternate;
+}
